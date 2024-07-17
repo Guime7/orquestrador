@@ -1,0 +1,19 @@
+tables:
+  TabelaA: &TabelaA
+    name: TabelaA
+    database: DatabaseA
+    # description: "Tabela contendo informações da tabela A"
+    origin: "ACL"
+
+processes:
+  Carga1: &Carga1
+    name: Carga1
+    description: "Processo de gerenciamento de grupos"
+  
+events:
+  - id: 1
+    name: EventA
+    processes: 
+      - *Carga1
+    tables:
+      - *TabelaA

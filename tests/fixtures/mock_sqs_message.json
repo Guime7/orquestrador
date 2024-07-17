@@ -1,0 +1,64 @@
+{
+    "Records": [
+        {
+            "messageId": "1",
+            "body": {
+                "nome_tabela": "tabela1",
+                "nome_database": "database1",
+                "partições": "part1,part2",
+                "id_da_stepfuncion_anterior": "step1"
+            },
+            "attributes": {
+                "ApproximateReceiveCount": "1",
+                "SentTimestamp": "1630488452339",
+                "SenderId": "123456789012",
+                "ApproximateFirstReceiveTimestamp": "1630488452349"
+            },
+            "messageAttributes": {},
+            "md5OfBody": "7b270e59b47ff90a553787216d55d91d",
+            "eventSource": "aws:sqs",
+            "eventSourceARN": "arn:aws:sqs:us-east-1:123456789012:MyQueue",
+            "awsRegion": "us-east-1"
+        },
+        {
+            "messageId": "2",
+            "body": {
+                "nome_tabela": "tabela2",
+                "nome_database": "database2",
+                "partições": "part3",
+                "id_da_stepfuncion_anterior": "step2"
+            },
+            "attributes": {
+                "ApproximateReceiveCount": "1",
+                "SentTimestamp": "1630488452339",
+                "SenderId": "123456789012",
+                "ApproximateFirstReceiveTimestamp": "1630488452349"
+            },
+            "messageAttributes": {},
+            "md5OfBody": "7b270e59b47ff90a553787216d55d91d",
+            "eventSource": "aws:sqs",
+            "eventSourceARN": "arn:aws:sqs:us-east-1:123456789012:MyQueue",
+            "awsRegion": "us-east-1"
+        },
+        {
+            "messageId": "3",
+            "body": {
+                "nome_tabela": "tabela3",
+                "nome_database": "database3",
+                "partições": "",
+                "id_da_stepfuncion_anterior": "step3"
+            },
+            "attributes": {
+                "ApproximateReceiveCount": "1",
+                "SentTimestamp": "1630488452339",
+                "SenderId": "123456789012",
+                "ApproximateFirstReceiveTimestamp": "1630488452349"
+            },
+            "messageAttributes": {},
+            "md5OfBody": "7b270e59b47ff90a553787216d55d91d",
+            "eventSource": "aws:sqs",
+            "eventSourceARN": "arn:aws:sqs:us-east-1:123456789012:MyQueue",
+            "awsRegion": "us-east-1"
+        }
+    ]
+}

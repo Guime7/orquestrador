@@ -1,0 +1,60 @@
+tables:
+  TabelaA: &TabelaA
+    name: TabelaA
+    database: DatabaseA
+    description: "Tabela contendo informações da tabela A"
+    origin: "ACL"
+    frequency_expected_to_receive: "Diária"
+  TabelaB: &TabelaB
+    name: TabelaB
+    database: DatabaseB
+    description: "Tabela contendo informações da tabela B"
+    origin: "DATAMESH"
+    frequency_expected_to_receive: "Diária"
+
+processes:
+  Carga1: &Carga1
+    name: Carga1
+    description: "Processo de gerenciamento de grupos"
+    frequency_expected_to_run: "Diária"
+    time_cut_report_not_executed: "08:00"
+  Carga2: &Carga2
+    name: Carga2
+    description: "Processo de gerenciamento de Carga2"
+    frequency_expected_to_run: "Diária"
+    time_cut_report_not_executed: null
+  Carga3: &Carga3
+    name: Carga3
+    description: "Processo de gerenciamento de Carga3"
+    frequency_expected_to_run: "Diária"
+    time_cut_report_not_executed: null
+  Carga4: &Carga4
+    name: Carga4
+    description: "Processo de gerenciamento de Carga4"
+    frequency_expected_to_run: "Diária"
+    time_cut_report_not_executed: null
+
+events:
+  - id: 1
+    rule_type: "ONE TABLE"
+    name: EventA
+    tables:
+      - *TabelaA
+    processes: 
+      - *Carga1
+      - *Carga4
+  - id: 2
+    rule_type: "SAME PARTITION"
+    name: EventAandB
+    tables:
+      - *TabelaA
+      - *TabelaB
+    processes: 
+      - *Carga2
+  - id: 3
+    rule_type: "ONE TABLE"
+    name: EventB
+    tables:
+      - *TabelaB
+    processes: 
+      - *Carga3

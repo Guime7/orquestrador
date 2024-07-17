@@ -1,0 +1,20 @@
+{
+    "python.testing.pytestArgs": [
+        "tests",
+        "-v",
+        "--cov=./",
+        "--cov-report=xml"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "cSpell.words": [
+        "boto",
+        "DATAMESH",
+        "dataprovider",
+        "eventbridge"
+    ],
+    "files.exclude": {
+        "**/__pycache__": true
+    },
+    "cSpell.language": "en,pt,pt_BR",
+}

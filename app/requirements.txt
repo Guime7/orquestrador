@@ -1,0 +1,8 @@
+boto3
+moto
+mypy_boto3_logs
+mypy_boto3_events
+mypy-boto3-sqs
+pytest
+pytest-cov
+pyyaml
